@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContestantController;
 use App\Http\Controllers\PredictionCategoryController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,7 @@ Route::get('/admin/users', function () { return view('admin.users'); });
 //Prediction Category Route
 Route::resource('admin/predictionCategory', PredictionCategoryController::class);
 Route::get('/admin/predictionCategory/{id}/delete', [PredictionCategoryController::class, 'destroy']);
+
+//Prediction Category Route
+Route::resource('admin/contestant', ContestantController::class);
+Route::get('/admin/contestant/{id}/delete', [ContestantController::class, 'destroy']);

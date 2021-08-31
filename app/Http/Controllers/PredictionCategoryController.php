@@ -15,7 +15,7 @@ class PredictionCategoryController extends Controller
     public function index()
     {
         $data=PredictionCategory::all();
-        return view('admin.predictionCategory',[
+        return view('admin.predictionCategory.index',[
             'data'=>$data
         ]);
     }
@@ -27,7 +27,7 @@ class PredictionCategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.addPredictionCategory');
+        return view('admin.predictionCategory.addPredictionCategory');
     }
 
     /**
@@ -58,7 +58,7 @@ class PredictionCategoryController extends Controller
     public function edit($id)
     {
         $data=PredictionCategory::find($id);
-        return view('admin.updatePredictionCategory', ['data'=>$data]);
+        return view('admin.predictionCategory.updatePredictionCategory', ['data'=>$data]);
     }
 
     /**

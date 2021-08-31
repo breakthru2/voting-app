@@ -82,7 +82,12 @@
                                 </a>
                                 <ul class="nav-main-submenu">
                                     <li class="nav-main-item">
-                                        <a class="nav-main-link" href="be_blocks_styles.html">
+                                        <a class="nav-main-link" href="{{url('admin/contestant')}}">
+                                            <span class="nav-main-link-name">BBNaija Contestants</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-main-item">
+                                        <a class="nav-main-link" href="{{url('admin/prediction')}}">
                                             <span class="nav-main-link-name">Predictions</span>
                                         </a>
                                     </li>
