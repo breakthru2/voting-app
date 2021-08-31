@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PredictionCategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () { return view('welcome'); });
 Route::get('/admin/', function () { return view('admin.index'); });
 Route::get('/admin/users', function () { return view('admin.users'); });
+
+//Prediction Category Route
+Route::resource('admin/predictionCategory', PredictionCategoryController::class);
+Route::get('/admin/predictionCategory/{id}/delete', [PredictionCategoryController::class, 'destroy']);

@@ -29,6 +29,7 @@
         <!-- Fonts and Dashmix framework -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
         <link rel="stylesheet" id="css-main" href="{{asset('css')}}/dashmix.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.0/css/jquery.dataTables.css">
 
         <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
         <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
@@ -86,7 +87,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-main-item">
-                                        <a class="nav-main-link" href="be_blocks_options.html">
+                                        <a class="nav-main-link" href="{{url('admin/predictionCategory')}}">
                                             <span class="nav-main-link-name">Prediction Category</span>
                                         </a>
                                     </li>
@@ -1128,5 +1129,11 @@
 
         <script src="{{asset('js')}}/plugins/chart.js/Chart.bundle.min.js"></script>
         <script src="{{asset('js')}}/pages/be_pages_dashboard.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.0/js/jquery.dataTables.js"></script>
+        <script>
+            $(document).ready( function () {
+                $('#table_id').DataTable();
+            } );
+        </script>
     </body>
 </html>
